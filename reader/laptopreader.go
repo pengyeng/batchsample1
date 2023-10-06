@@ -12,9 +12,11 @@ type LaptopReader struct {
 }
 
 func (r *LaptopReader) Read() []batch103.BatchData {
-	log.Println("laptop reader")
 	r.SetFileName("laptop.csv")
-	csvFileReader := r.OpenCSVFile()
+	csvFileReader, err := r.OpenCSVFile()
+	if err != nil {
+		log.Fatalln(err)
+	}
 	var result []batch103.BatchData
 	for {
 

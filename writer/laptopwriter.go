@@ -18,7 +18,7 @@ type LaptopDBWriter struct {
 func (d *LaptopDBWriter) Write(data []batch103.BatchData) {
 
 	// Create an ent.Client with MySQL database.
-	client, err := ent.Open(dialect.MySQL, "root:P@ssw0rd@tcp(127.0.0.1:3306)/go-data")
+	client, err := ent.Open(dialect.MySQL, "root:p@ssw0rd@tcp(127.0.0.1:3306)/go-data")
 	if err != nil {
 		log.Fatalf("failed opening connection to MySQL: %v", err)
 	}
