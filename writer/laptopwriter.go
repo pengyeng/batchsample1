@@ -15,12 +15,13 @@ type LaptopDBWriter struct {
 	batch103.DBWriter
 }
 
-func (d *LaptopDBWriter) Write(data []batch103.BatchData) {
+func (d *LaptopDBWriter) Write(data []batch103.BatchData) error {
 
 	// Create an ent.Client with MySQL database.
-	client, err := ent.Open(dialect.MySQL, "root:p@ssw0rd@tcp(127.0.0.1:3306)/go-data")
+	client, err := ent.Open(dialect.MySQL, "root:P@ssw0rd@tcp(127.0.0.1:3306)/go-data")
 	if err != nil {
 		log.Fatalf("failed opening connection to MySQL: %v", err)
+		return err
 	}
 	defer client.Close()
 	ctx := context.Background()
@@ -40,4 +41,5 @@ func (d *LaptopDBWriter) Write(data []batch103.BatchData) {
 
 		}
 	}
+	return nil
 }
