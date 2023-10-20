@@ -172,6 +172,8 @@ github.com/pascaldekloe/goe v0.0.0-20180627143212-57f6aae5913c/go.mod h1:lzWF7FI
 github.com/pelletier/go-toml v1.2.0/go.mod h1:5z9KED0ma1S8pY6P1sdut58dfprrGBbd/94hg7ilaic=
 github.com/pengyeng/batch103 v0.0.0-20231006104035-716a04ae0364 h1:ybVRtAuDtvVpTjzhW71N2x8jCBjyzZ+QJEGrWZh9q18=
 github.com/pengyeng/batch103 v0.0.0-20231006104035-716a04ae0364/go.mod h1:CRgBgixA7yaZyy48PsidqbhAPOtd+VscGJlLYsNB+iM=
+github.com/pengyeng/batch103 v0.0.0-20231018151522-d7f0467304d8 h1:N5NyJOooRW5Qa5Govk/+aJT+dpaId21MCytOsEYr4Ko=
+github.com/pengyeng/batch103 v0.0.0-20231018151522-d7f0467304d8/go.mod h1:CRgBgixA7yaZyy48PsidqbhAPOtd+VscGJlLYsNB+iM=
 github.com/pkg/errors v0.8.0/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=

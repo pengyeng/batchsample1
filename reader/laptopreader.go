@@ -11,13 +11,16 @@ type LaptopReader struct {
 	batch103.FileReader
 }
 
-func (r *LaptopReader) Read() []batch103.BatchData {
+func (r *LaptopReader) Read() ([]batch103.BatchData, error) {
 	r.SetFileName("laptop.csv")
+	var result []batch103.BatchData
+
 	csvFileReader, err := r.OpenCSVFile()
 	if err != nil {
 		log.Fatalln(err)
+		return result, err
 	}
-	var result []batch103.BatchData
+
 	for {
 
 		record, err := csvFileReader.Read()
@@ -35,5 +38,5 @@ func (r *LaptopReader) Read() []batch103.BatchData {
 		result = append(result, *batchData)
 	}
 	log.Println("No Of Record Retrieved ", len(result))
-	return result
+	return result, nil
 }
